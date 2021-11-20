@@ -107,14 +107,29 @@ body {
     margin-left: auto;;
 }
 .contacts-link {
+    display: flex;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--main-text-color)
+    color: var(--main-text-color);
+    align-items: center;
 }
 .contacts-item:first-child {
     margin-right: 50px;
+}
+.contacts-item {
+}
+
+.contacts-icon {
+    fill: currentColor;
+    margin-right: 10px;
+}
+.contacts-icon:hover,
+.contacts-icon:focus {
+    color:var(--text-accent)
+    /* width: 10px;
+    height: 16px; */
 }
 .navigation-link:hover,
 .navigation-link:focus,
@@ -209,7 +224,24 @@ body {
     letter-spacing: 0.03em;
     color: var(--main-text-color);
 }
-
+.features-icon-list {
+    display: flex;
+    justify-content: center;
+}
+.features-icon-item {
+    display: block;
+    width: 270px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+}
+/* .features-icon-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 
 /* ---------------------------------------------------------------section works---------------------- */
 
@@ -239,6 +271,7 @@ body {
 .card {
     padding-top: 30px;
     padding-bottom: 30px;
+    background-color: #FFFFFF
 }
 .team-title {
     margin-bottom: 10px;
@@ -254,8 +287,82 @@ body {
     letter-spacing: 0.03em;
     text-align: center;
     color: var(--main-text-color);
+    margin-bottom: 16px;
+}
+.team-social-list {
+    display: flex;
+    justify-content: center;
+}
+.team-social-item {
+    width: 44px;
+    height: 44px;
+}
+/* .team-social-item + .team-social-item {
+    margin-left: 10px;
+} */
+.team-social-item:not(:first-child) {
+    margin-left: 10px;
+}
+.team-social-link {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #AFB1B8;
+}
+.team-social-icon {
+    fill: currentColor;
+    stroke-width: 0;
+}
+.team-social-link:hover,
+.team-social-link:focus {
+    background-color:var(--text-accent);
+    color: #FFFFFF;
 }
 
+/* --------------------------------------------------------section-clients------------- */
+
+.clients-list {
+    display: flex;
+    justify-content: center;
+}
+
+.clients-item {
+    display: block;
+    width: 170px;
+    height: 92px;
+    border: 1px solid#AFB1B8; 
+    border-radius: 4px;
+}
+
+.clients-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: #AFB1B8;
+    align-items: center;
+    justify-content: center;
+}
+
+.clients-icon {
+    fill: currentColor;
+}
+
+.clients-item:not(:first-child) {
+    margin-left: 30px;
+}
+.clients-link:hover,
+.clients-link:focus {
+    color: var(--text-accent);
+    border: 1px solid var(--text-accent);
+}
+.clients-icon:hover,
+.clients-icon:focus {
+    fill: var(--text-accent);
+}
 /* ---------------------------------------------------------------footer---------------------- */
 
 .footer {
@@ -289,8 +396,52 @@ body {
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
-
-
+.footer-container {
+    display: flex;
+    justify-content: baseline;
+}
+.join-box {
+    width: 206px;
+    margin-left: 70px;
+}
+.join-title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--second-title-text-color);
+}
+.join-social-list {
+    display: flex;
+    justify-content: center;
+}
+.join-social-item {
+    width: 44px;
+    height: 44px;
+}
+.join-social-link {
+    width: 100%;
+    height: 100%;
+    color: var(--second-title-text-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.join-social-icon {
+    fill: currentColor;
+}   
+.join-social-item:not(:first-child) {
+    margin-left: 10px;
+    
+}
+.join-social-link:hover,
+.join-social-link:focus {
+    background-color:var(--text-accent);
+    color: #FFFFFF;
 /* ----------------------------------------------------------portfolio page---------------------------------------------- */
 
 
