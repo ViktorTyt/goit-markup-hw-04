@@ -4,6 +4,7 @@
 --second-title-text-color:#FFFFFF;
 --text-accent: #2196F3;
 --background-color-dark: #2F303A;
+--second-background-color: #F5F4FA;
 }
 
 p, ul, h1, h2, h3, h4 {
@@ -118,9 +119,6 @@ body {
 .contacts-item:first-child {
     margin-right: 50px;
 }
-.contacts-item {
-}
-
 .contacts-icon {
     fill: currentColor;
     margin-right: 10px;
@@ -159,11 +157,12 @@ body {
                         rgba(47, 48, 58, 0.4),
                         rgba(47, 48, 58, 0.4)
                     ),
-                    url(../images/Hero\ bg.jpg);
+                    url(../images/Hero-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
-
+    background-size: cover;
 }
+
 .hero-title {
     width: 696px;
     margin-right: auto;
@@ -192,11 +191,11 @@ body {
     border: transparent;
     border-radius: 4px;
     padding: 10px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .hero-btn:hover,
 .hero-btn:focus {
-    color: var(--text-accent);
-    color: var(--second-title-text-color);
+    background-color: #188CE8;
 }
 
 /*----------------------------------------------------------section features----------------------------- */
@@ -205,9 +204,12 @@ body {
 .features-list {
     display: flex;
 }
+.features-item {
+    display: block;
+    width: 270px;
+}
 .features-item:not(:last-child) {
     margin-right: 30px;
-    max-width: 270px;
 }
 .features-title {
     margin-bottom: 10px;
@@ -224,24 +226,15 @@ body {
     letter-spacing: 0.03em;
     color: var(--main-text-color);
 }
-.features-icon-list {
+
+.features-icon-box {
     display: flex;
-    justify-content: center;
-}
-.features-icon-item {
-    display: block;
-    width: 270px;
     height: 120px;
     align-items: center;
     justify-content: center;
+    background-color:var(--second-background-color);
+    margin-bottom: 30px;  
 }
-/* .features-icon-link {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 
 /* ---------------------------------------------------------------section works---------------------- */
 
@@ -260,10 +253,17 @@ body {
 /* ----------------------------------------------------------------section team--------------------- */
 
 .team-section {
-    background-color: #F5F4FA;
+    background-color: var(--second-background-color);
 }
 .team-list {
     display: flex;
+}
+.team-item {
+    background-color: var(--second-title-text-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 0px 0px 4px 4px;
 }
 .team-item:not(:last-child) {
     margin-right: 30px;
@@ -271,7 +271,6 @@ body {
 .card {
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #FFFFFF
 }
 .team-title {
     margin-bottom: 10px;
@@ -306,7 +305,7 @@ body {
 .team-social-link {
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--second-title-text-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -320,7 +319,7 @@ body {
 .team-social-link:hover,
 .team-social-link:focus {
     background-color:var(--text-accent);
-    color: #FFFFFF;
+    color: var(--second-title-text-color);
 }
 
 /* --------------------------------------------------------section-clients------------- */
@@ -398,7 +397,7 @@ body {
 }
 .footer-container {
     display: flex;
-    justify-content: baseline;
+    align-items:baseline;
 }
 .join-box {
     width: 206px;
@@ -441,7 +440,8 @@ body {
 .join-social-link:hover,
 .join-social-link:focus {
     background-color:var(--text-accent);
-    color: #FFFFFF;
+    color: var(--second-title-text-color);
+}
 /* ----------------------------------------------------------portfolio page---------------------------------------------- */
 
 
@@ -453,13 +453,18 @@ body {
 .portfolio-filter-item:not(:last-child) {
     margin-right: 8px;
 }
-
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
 }
 .portfolio-item {
     margin-right: 30px;
+    
+}
+.portfolio-item:hover,
+.portfolio-item:focus {
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+cursor: pointer;
 }
 .portfolio-item:nth-child(3n) {
     margin-right: 0px;
@@ -482,7 +487,7 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color:var(--main-title-color);
-    background-color: #F5F4FA;
+    background-color: var(--second-background-color);
     cursor: pointer;
     border: transparent;
     border-radius: 4px;
@@ -507,4 +512,7 @@ body {
 .portfolio-text-btn:focus {
     background-color:var(--text-accent);
     color:var(--second-title-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+                0px 1px 2px rgba(0, 0, 0, 0.08),
+                0px 2px 2px rgba(0, 0, 0, 0.12);
 }
