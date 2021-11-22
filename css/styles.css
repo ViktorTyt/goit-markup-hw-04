@@ -149,7 +149,7 @@ body {
 .hero-section {
     padding: 200px 0;
     text-align: center;
-    width: 1600px;  
+    max-width: 1600px;  
     margin: 0 auto;
     background-color: #C4C4C4;
     background-image: linear-gradient(
@@ -328,12 +328,10 @@ body {
 }
 
 .clients-item {
-    display: block;
     width: 170px;
     height: 92px;
-    border: 1px solid#AFB1B8; 
-    border-radius: 4px;
 }
+
 
 .clients-link {
     display: flex;
@@ -342,6 +340,8 @@ body {
     color: #AFB1B8;
     align-items: center;
     justify-content: center;
+    border: 1px solid#AFB1B8; 
+    border-radius: 4px;
 }
 
 .clients-icon {
@@ -354,7 +354,7 @@ body {
 .clients-link:hover,
 .clients-link:focus {
     color: var(--text-accent);
-    border: 1px solid var(--text-accent);
+    border-color: var(--text-accent);
 }
 .clients-icon:hover,
 .clients-icon:focus {
@@ -457,12 +457,11 @@ body {
 }
 .portfolio-item {
     margin-right: 30px;
+    color: var(--main-text-color);
     
 }
-.portfolio-item:hover,
-.portfolio-item:focus {
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-cursor: pointer;
+.portfolio-link {
+    display: block;
 }
 .portfolio-item:nth-child(3n) {
     margin-right: 0px;
@@ -470,13 +469,17 @@ cursor: pointer;
 .portfolio-item:not(:nth-last-child(-n+3)) {
     margin-bottom: 30px;
 }
+
 .card-title {
     padding: 20px 24px;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
 }
-
+.portfolio-link:hover,
+.portfolio-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .portfolio-text-btn {
     font-family: inherit;
     font-weight: 500;
